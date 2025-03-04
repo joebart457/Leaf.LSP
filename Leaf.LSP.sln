@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageServerProtocol", "LanguageServerProtocol\LanguageServerProtocol.csproj", "{0CD60D47-1C9C-4D51-BDFB-46ECA22C9D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leaf.LSP.Server", "Leaf.LSP.Server\Leaf.LSP.Server.csproj", "{09E1E4F5-6DEC-4587-A769-978EBAC6DBF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CD60D47-1C9C-4D51-BDFB-46ECA22C9D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD60D47-1C9C-4D51-BDFB-46ECA22C9D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD60D47-1C9C-4D51-BDFB-46ECA22C9D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD60D47-1C9C-4D51-BDFB-46ECA22C9D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E1E4F5-6DEC-4587-A769-978EBAC6DBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E1E4F5-6DEC-4587-A769-978EBAC6DBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E1E4F5-6DEC-4587-A769-978EBAC6DBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E1E4F5-6DEC-4587-A769-978EBAC6DBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BBF9A24-BD9E-4917-8C2F-3CD7D32D2F76}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,97 @@
+{
+  "name": "language-client-example",
+  "description": "VSCode part of a language server",
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "version": "0.0.1",
+  "publisher": "vscode",
+  "engines": {
+    "vscode": "^1.8.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:leaf"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Example configuration",
+      "properties": {
+        "languageServerExample.maxNumberOfProblems": {
+          "type": "number",
+          "default": 100,
+          "description": "Controls the maximum number of problems produced by the server."
+        },
+        "languageServerExample.trace.server": {
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Traces the communication between VSCode and the languageServerExample service."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "leaf",
+        "extensions": [
+          ".leaf"
+        ],
+        "aliases": [
+          "leaf",
+          "leaflang"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "leaf",
+        "scopeName": "source.leaf",
+        "path": "./syntaxes/leaf.tmGrammar.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[leaf]": {
+        "editor.wordBasedSuggestions": "off"
+      }
+    },
+    "commands": [
+      {
+        "command": "leafLanguageExtension.compile",
+        "title": "Compile"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "leafLanguageExtension.compile",
+          "when": "editorLangId == leaf"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "leafLanguageExtension.compile",
+        "key": "F5",
+        "when": "editorLangId == leaf"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.13.4",
+    "@types/vscode": "^1.75.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "vscode-languageclient": "~9.0.1"
+  }
+}
