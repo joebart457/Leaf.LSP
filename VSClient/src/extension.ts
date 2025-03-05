@@ -26,7 +26,7 @@ export function activate(context: ExtensionContext) {
   	const commandHandler = (outputFileName:string = 'out.exe') => {
     	let filePath: string = window.activeTextEditor.document.uri.fsPath;
 		let terminal: Terminal = window.createTerminal('sendText', "cmd");
-		let compileCommand = context.asAbsolutePath(path.join('server', 'Language.Experimental.Compiler.exe'));
+		let compileCommand = context.asAbsolutePath(path.join('server', 'Leaf.Language.Compiler.exe'));
         terminal.sendText(`"${compileCommand}" -i "${filePath}" -o "${outputFileName}" -q`);
         terminal.show();
   	};
