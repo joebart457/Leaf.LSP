@@ -162,11 +162,23 @@ public class LeafLanguageServer : ServiceConnection
             detail = x.GetFunctionPointerType().ToString(),
             documentation = "function",
         }));
+        suggestions.AddRange(programContext.GenericFunctionDefinitions.Select(x => new CompletionItem()
+        {
+            label = x.FunctionName.Lexeme,
+            detail = x.GetDecoratedFunctionIdentifier(),
+            documentation = "function",
+        }));
         suggestions.AddRange(programContext.ImportedFunctionDefinitions.Select(x => new CompletionItem()
         {
             label = x.FunctionName.Lexeme,
             detail = x.GetFunctionPointerType().ToString(),
             documentation = "importedfunction",
+        }));
+        suggestions.AddRange(programContext.UserDefinedTypes.Select(x => new CompletionItem()
+        {
+            label = x.Name.Lexeme,
+            detail = x.ToString(),
+            documentation = "function",
         }));
         if (token != null) suggestions = suggestions.Where(x => x.label.StartsWith(token.Lexeme, StringComparison.InvariantCultureIgnoreCase)).ToList();
         var array = suggestions.ToArray();

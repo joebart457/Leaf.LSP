@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Leaf.Language.Api" Version="0.1.5" />
+    <PackageReference Include="Leaf.Language.Api" Version="0.1.7" />
   </ItemGroup>
 
   <ItemGroup>
