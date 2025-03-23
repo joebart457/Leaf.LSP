@@ -1,4 +1,5 @@
 ﻿using LanguageServer.Json;
+using LanguageServerProtocol.Parameters.General;
 
 namespace LanguageServer.Parameters.General
 {
@@ -140,6 +141,14 @@ namespace LanguageServer.Parameters.General
         /// </summary>
         /// <seealso>Spec 3.6.0</seealso>
         public WorkspaceOptions workspace { get; set; }
+
+        /**
+	     * The server provides semantic tokens support.
+	     *
+	     * @since 3.16.0
+	     */
+        public SemanticTokensOptions semanticTokensProvider { get; set; }
+
 
         /// <summary>
         /// Experimental server capabilities.

@@ -4,6 +4,7 @@ using LanguageServer.Parameters;
 using LanguageServer.Parameters.General;
 using LanguageServer.Parameters.TextDocument;
 using LanguageServer.Parameters.Workspace;
+using LanguageServerProtocol.Parameters.TextDocument;
 using System;
 using System.IO;
 using System.Threading;
@@ -456,6 +457,19 @@ namespace LanguageServer
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Requesting semantic tokens for a whole file
+        /// </summary>
+        /// <param name="params"></param>
+        /// <returns></returns>
+        /// <seealso>Spec 3.10.0</seealso>
+        [JsonRpcMethod("textDocument/semanticTokens/full")]
+        protected virtual Result<SemanticTokens, ResponseError> SemanticTokensFull(SemanticTokensRequestParams @params)
+        {
+            throw new NotImplementedException();
+        }
+
 
         #endregion
     }
